@@ -28,7 +28,7 @@ include_once('koneksi.php');
 			$_SESSION['lives'] -= 1;
 			$_SESSION['skor'] -= 2;
 
-			if ($_SESSION['lives'] == 0) {
+			if ($_SESSION['lives'] <= 0) {
 				$nama	= $_SESSION['nama'];
 				$skor	= $_SESSION['skor'];
 
