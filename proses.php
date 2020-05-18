@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<title>Mathematics Game</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<body>
+<div class="container">
 <?php
 session_start();
 include_once('koneksi.php');
@@ -6,9 +17,9 @@ include_once('koneksi.php');
 
 			$_SESSION['skor'] += 10;
 
-			echo "Hello ".$_SESSION['nama'].", Selamat jawaban anda benar<br>";
-			echo "Lives: ".$_SESSION['lives']."|Score: ".$_SESSION['skor'];
-			echo "<br><a href='game.php'>Soal selanjutnya</a>";
+			echo "<h2>Hello ".$_SESSION['nama'].", Selamat jawaban anda <font color='green'>benar</font><br></h2>";
+			echo "<h6>Lives: ".$_SESSION['lives']."|Score: ".$_SESSION['skor']."</h6>";
+			echo "<br><a href='game.php' class='btn btn-primary'>Soal selanjutnya</a>";
 		}
 		else {
 
@@ -24,9 +35,13 @@ include_once('koneksi.php');
 				header('location: hall.php');
 			}
 
-			echo "Hello ".$_SESSION['nama'].", sayang jawaban Anda salah... tetap semangat ya !!!<br>";
-			echo "Lives: ".$_SESSION['lives']."|Score: ".$_SESSION['skor'];
-			echo "<br><a href='game.php'>Soal selanjutnya</a>";
+			echo "<h2>Hello ".$_SESSION['nama'].", sayang jawaban Anda <font color='red'>salah...</font> tetap semangat ya !!!<br></h2>";
+			echo "<h6>Lives: ".$_SESSION['lives']."|Score: ".$_SESSION['skor']."</h6>";
+			echo "<br><a href='game.php' class='btn btn-primary'>Soal selanjutnya</a>";
 		}
 	}
 ?>
+</div>
+</body>
+</html>
+
