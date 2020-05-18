@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once('koneksi.php');
+?>
 <!DOCTYPE html>
 <html>
 <title>Mathematics Game</title>
@@ -10,8 +14,6 @@
 <body>
 <div class="container">
 <?php
-session_start();
-include_once('koneksi.php');
 	if (isset($_POST['submit'])) {
 		if ($_SESSION['sum'] == $_POST['jawaban']) {
 
