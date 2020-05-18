@@ -34,7 +34,8 @@ include_once('koneksi.php');
 
 				$insert = mysqli_query($mysqli, "INSERT INTO hall_of_fame (nama, skor) VALUES ('$nama', '$skor')");
 
-				header('location: hall.php');
+				//header('location: hall.php');
+				echo "<script>location.href = 'hall.php';</script>";
 			}
 
 			echo "<h2>Hello ".$_SESSION['nama'].", sayang jawaban Anda <font color='red'>salah...</font> tetap semangat ya !!!<br></h2>";
